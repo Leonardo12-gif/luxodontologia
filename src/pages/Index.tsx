@@ -1,21 +1,32 @@
+import { useState, useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
 import DifferentialsSection from "@/components/DifferentialsSection";
 import UnitsSection from "@/components/UnitsSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import CtaSection from "@/components/CtaSection";
 import FooterSection from "@/components/FooterSection";
+import ColorToggle from "@/components/ColorToggle";
 
-const Index = () => (
-  <div className="min-h-screen bg-background">
-    <div className="max-w-[480px] mx-auto">
-      <HeroSection />
-      <DifferentialsSection />
-      <UnitsSection />
-      <BeforeAfterSection />
-      <CtaSection />
-      <FooterSection />
+const Index = () => {
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("light-mode", !isDark);
+  }, [isDark]);
+
+  return (
+    <div className="min-h-screen bg-background">
+      <ColorToggle isDark={isDark} onToggle={() => setIsDark(!isDark)} />
+      <div className="max-w-[480px] mx-auto">
+        <HeroSection />
+        <DifferentialsSection />
+        <UnitsSection />
+        <BeforeAfterSection />
+        <CtaSection />
+        <FooterSection />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Index;

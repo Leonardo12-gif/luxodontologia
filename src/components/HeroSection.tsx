@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import logoLux from "@/assets/logo-lux.png";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 16 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" as const },
+    transition: { delay: i * 0.12, duration: 0.5, ease: "easeOut" as const },
   }),
 };
 
@@ -16,9 +16,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="flex flex-col items-center pt-12 pb-10 px-6 text-center">
+    <section className="flex flex-col items-center pt-10 pb-6 px-6 text-center">
       <motion.div
-        className="w-28 h-28 rounded-full overflow-hidden glow-primary mb-6"
+        className="w-24 h-24 rounded-full overflow-hidden glow-primary mb-4"
         variants={fadeUp}
         initial="hidden"
         animate="visible"
@@ -28,7 +28,7 @@ const HeroSection = () => {
       </motion.div>
 
       <motion.h1
-        className="font-display text-3xl md:text-4xl font-semibold text-foreground tracking-wide mb-2"
+        className="font-display text-2xl font-semibold text-foreground tracking-wide mb-1"
         variants={fadeUp}
         initial="hidden"
         animate="visible"
@@ -38,7 +38,7 @@ const HeroSection = () => {
       </motion.h1>
 
       <motion.p
-        className="text-champagne font-body text-sm tracking-widest uppercase mb-4"
+        className="text-champagne font-body text-[11px] tracking-widest uppercase mb-3"
         variants={fadeUp}
         initial="hidden"
         animate="visible"
@@ -48,7 +48,7 @@ const HeroSection = () => {
       </motion.p>
 
       <motion.p
-        className="text-muted-foreground font-body text-sm md:text-base max-w-sm leading-relaxed mb-8"
+        className="text-muted-foreground font-body text-xs max-w-xs leading-relaxed mb-2"
         variants={fadeUp}
         initial="hidden"
         animate="visible"
@@ -57,9 +57,19 @@ const HeroSection = () => {
         Especialistas em lentes e facetas em resina. Transformamos sorrisos com naturalidade, sofisticação e excelência.
       </motion.p>
 
+      <motion.p
+        className="text-muted-foreground/60 font-body text-[10px] tracking-wide mb-6"
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+        custom={3}
+      >
+        RT: Larissa Morais | CROSP 119375 · CROSP-CL 028169
+      </motion.p>
+
       <motion.button
         onClick={scrollToUnits}
-        className="font-body text-sm font-semibold tracking-wider uppercase px-8 py-3.5 rounded-full bg-primary text-primary-foreground border border-champagne/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 glow-primary"
+        className="font-body text-xs font-semibold tracking-wider uppercase px-7 py-3 rounded-full bg-primary text-primary-foreground border border-champagne/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 glow-primary"
         variants={fadeUp}
         initial="hidden"
         animate="visible"
