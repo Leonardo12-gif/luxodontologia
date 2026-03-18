@@ -15,11 +15,11 @@ const Index = () => {
   }, [isDark]);
 
   return (
-    <div className="min-h-screen bg-background">
-      <ColorToggle isDark={isDark} onToggle={() => setIsDark(!isDark)} />
+    <div className="min-h-screen bg-background transition-colors duration-500">
       <div className="max-w-[480px] mx-auto">
         <HeroSection />
         <DifferentialsSection />
+        <ColorToggle isDark={isDark} onToggle={() => setIsDark(!isDark)} />
         <UnitsSection />
         <BeforeAfterSection />
         <CtaSection />
