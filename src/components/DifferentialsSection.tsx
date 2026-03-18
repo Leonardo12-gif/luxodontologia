@@ -2,33 +2,30 @@ import { motion } from "framer-motion";
 import { Sparkles, Heart, MapPin } from "lucide-react";
 
 const items = [
-  { icon: Sparkles, title: "Lentes e Facetas em Resina", desc: "Especialistas em estética dental de alta precisão" },
-  { icon: Heart, title: "Atendimento Personalizado", desc: "Cuidado exclusivo para cada paciente" },
-  { icon: MapPin, title: "Múltiplas Unidades", desc: "Presença em diversas cidades de São Paulo" },
+  { icon: Sparkles, label: "Lentes e Facetas" },
+  { icon: Heart, label: "Atendimento VIP" },
+  { icon: MapPin, label: "6 Unidades em SP" },
 ];
 
 const DifferentialsSection = () => (
-  <section className="px-6 pb-12">
-    <div className="grid gap-4">
+  <section className="px-6 pb-8">
+    <motion.div
+      className="flex gap-3 justify-center"
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
       {items.map((item, i) => (
-        <motion.div
+        <div
           key={i}
-          className="bg-card rounded-xl p-5 border border-border/50 flex items-start gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: i * 0.1, duration: 0.5 }}
+          className="flex-1 bg-card rounded-lg p-3 border border-border/50 flex flex-col items-center gap-2 text-center"
         >
-          <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-            <item.icon className="w-5 h-5 text-champagne" />
-          </div>
-          <div>
-            <h3 className="font-display text-base font-semibold text-foreground mb-1">{item.title}</h3>
-            <p className="font-body text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
-          </div>
-        </motion.div>
+          <item.icon className="w-4 h-4 text-champagne" />
+          <span className="font-body text-[10px] text-muted-foreground leading-tight">{item.label}</span>
+        </div>
       ))}
-    </div>
+    </motion.div>
   </section>
 );
 
