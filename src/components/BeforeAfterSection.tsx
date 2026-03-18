@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import before1 from "@/assets/before-1.png";
 import after1 from "@/assets/after-1.png";
-import result1 from "@/assets/result-1.png";
-import result2 from "@/assets/result-2.png";
 
 const BeforeAfterSection = () => {
   const [current, setCurrent] = useState(0);
