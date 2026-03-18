@@ -1,31 +1,74 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import before1 from "@/assets/before-1.png";
 import after1 from "@/assets/after-1.png";
+import result3 from "@/assets/result-3.png";
+import result4 from "@/assets/result-4.png";
+import result5 from "@/assets/result-5.png";
+import result6 from "@/assets/result-6.png";
+import result7 from "@/assets/result-7.png";
+
+const resultSlides = [result3, result4, result5, result6, result7];
 
 const BeforeAfterSection = () => {
   const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const touchStart = useRef(0);
+  const resumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const totalSlides = 2;
-  const next = useCallback(() => setCurrent((c) => Math.min(c + 1, totalSlides - 1)), []);
-  const prev = useCallback(() => setCurrent((c) => Math.max(c - 1, 0)), []);
+  const totalSlides = resultSlides.length;
+
+  const scheduleResume = useCallback(() => {
+    if (resumeTimer.current) clearTimeout(resumeTimer.current);
+    resumeTimer.current = setTimeout(() => setIsPaused(false), 5000);
+  }, []);
+
+  const pauseAutoplay = useCallback(() => {
+    setIsPaused(true);
+    scheduleResume();
+  }, [scheduleResume]);
+
+  const next = useCallback(() => {
+    setCurrent((c) => (c + 1) % totalSlides);
+  }, [totalSlides]);
+
+  const prev = useCallback(() => {
+    setCurrent((c) => (c - 1 + totalSlides) % totalSlides);
+  }, [totalSlides]);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setCurrent((c) => (c + 1) % totalSlides);
+    }, 2800);
+    return () => clearInterval(interval);
+  }, [isPaused, totalSlides]);
+
+  useEffect(() => {
+    return () => {
+      if (resumeTimer.current) clearTimeout(resumeTimer.current);
+    };
+  }, []);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStart.current = e.touches[0].clientX;
+    pauseAutoplay();
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
     const diff = touchStart.current - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 50) {
-      if (diff > 0) { next(); } else { prev(); }
+      if (diff > 0) {
+        next();
+      } else {
+        prev();
+      }
     }
   };
 
   return (
     <section className="px-6 py-8">
-      {/* Before & After */}
       <motion.h2
         className="font-display text-xl font-semibold text-foreground text-center mb-4"
         initial={{ opacity: 0 }}
@@ -48,7 +91,6 @@ const BeforeAfterSection = () => {
         </div>
       </div>
 
-      {/* Results Carousel */}
       <motion.h2
         className="font-display text-xl font-semibold text-foreground text-center mb-4"
         initial={{ opacity: 0 }}
@@ -62,12 +104,14 @@ const BeforeAfterSection = () => {
         className="relative overflow-hidden rounded-xl border border-border/50"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
+        onMouseEnter={pauseAutoplay}
+        onClick={pauseAutoplay}
       >
         <div
-          className="flex transition-transform duration-500 ease-out"
+          className="flex transition-transform duration-700 ease-out"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
-          {[after1, before1].map((img, i) => (
+          {resultSlides.map((img, i) => (
             <div key={i} className="w-full flex-shrink-0">
               <img src={img} alt={`Resultado ${i + 1}`} className="w-full aspect-[4/3] object-cover" />
             </div>
@@ -75,25 +119,32 @@ const BeforeAfterSection = () => {
         </div>
 
         <button
-          onClick={prev}
-          disabled={current === 0}
-          className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-background/60 backdrop-blur flex items-center justify-center text-foreground disabled:opacity-20 transition-all"
+          onClick={() => {
+            pauseAutoplay();
+            prev();
+          }}
+          className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-background/60 backdrop-blur flex items-center justify-center text-foreground transition-all"
         >
           <ChevronLeft className="w-4 h-4" />
         </button>
         <button
-          onClick={next}
-          disabled={current === totalSlides - 1}
-          className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-background/60 backdrop-blur flex items-center justify-center text-foreground disabled:opacity-20 transition-all"
+          onClick={() => {
+            pauseAutoplay();
+            next();
+          }}
+          className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-background/60 backdrop-blur flex items-center justify-center text-foreground transition-all"
         >
           <ChevronRight className="w-4 h-4" />
         </button>
 
         <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
-          {[0, 1].map((i) => (
+          {resultSlides.map((_, i) => (
             <button
               key={i}
-              onClick={() => setCurrent(i)}
+              onClick={() => {
+                pauseAutoplay();
+                setCurrent(i);
+              }}
               className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
                 i === current ? "bg-champagne w-4" : "bg-foreground/30"
               }`}
