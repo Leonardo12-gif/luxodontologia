@@ -67,7 +67,7 @@ const BeforeAfterSection = () => {
           className="flex transition-transform duration-500 ease-out"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
-          {[result1, result2].map((img, i) => (
+          {[after1, before1].map((img, i) => (
             <div key={i} className="w-full flex-shrink-0">
               <img src={img} alt={`Resultado ${i + 1}`} className="w-full aspect-[4/3] object-cover" />
             </div>
