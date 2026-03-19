@@ -31,7 +31,7 @@ const UnitsSection = () => (
       {units.map((unit, i) => (
         <motion.div
           key={i}
-          className="bg-card rounded-xl p-4 border border-border/50"
+          className="bg-card rounded-xl p-4 border border-border shadow-sm"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

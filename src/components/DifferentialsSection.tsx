@@ -19,7 +19,7 @@ const DifferentialsSection = () => (
       {items.map((item, i) => (
         <div
           key={i}
-          className="flex-1 bg-card rounded-lg p-3 border border-border/50 flex flex-col items-center gap-2 text-center"
+          className="flex-1 bg-card rounded-lg p-3 border border-border flex flex-col items-center gap-2 text-center shadow-sm"
         >
           <item.icon className="w-4 h-4 text-champagne" />
           <span className="font-body text-[10px] text-muted-foreground leading-tight">{item.label}</span>

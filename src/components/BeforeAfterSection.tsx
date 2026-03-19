@@ -78,8 +78,8 @@ const BeforeAfterSection = () => {
         Antes & Depois
       </motion.h2>
 
-      <div className="rounded-xl border border-border/50 overflow-hidden mb-8">
-        <div className="grid grid-cols-2 gap-px bg-border/30">
+      <div className="rounded-xl border border-border overflow-hidden mb-8 shadow-sm">
+        <div className="grid grid-cols-2 gap-px bg-border">
           <div className="relative">
             <img src={before1} alt="Antes do procedimento" className="w-full aspect-[4/3] object-cover" />
             <span className="absolute bottom-2 left-2 font-body text-[9px] uppercase tracking-widest bg-background/80 text-foreground px-2 py-0.5 rounded">Antes</span>
@@ -101,7 +101,7 @@ const BeforeAfterSection = () => {
       </motion.h2>
 
       <div
-        className="relative overflow-hidden rounded-xl border border-border/50"
+        className="relative overflow-hidden rounded-xl border border-border shadow-sm"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onMouseEnter={pauseAutoplay}
