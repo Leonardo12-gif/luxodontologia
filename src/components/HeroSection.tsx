@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Instagram } from "lucide-react";
 import logoLux from "@/assets/logo-lux.png";
 
 const fadeUp = {
@@ -58,7 +59,7 @@ const HeroSection = () => {
       </motion.p>
 
       <motion.p
-        className="text-muted-foreground/60 font-body text-[10px] tracking-wide mb-6"
+        className="text-muted-foreground/60 font-body text-[10px] tracking-wide mb-4"
         variants={fadeUp}
         initial="hidden"
         animate="visible"
@@ -66,6 +67,20 @@ const HeroSection = () => {
       >
         RT: Larissa Morais | CROSP 119375 · CROSP-CL 028169
       </motion.p>
+
+      <motion.a
+        href="https://www.instagram.com/luxodontologiaestetica/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-1.5 text-muted-foreground hover:text-champagne transition-colors duration-300 mb-6"
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+        custom={3.5}
+      >
+        <Instagram className="w-4 h-4" />
+        <span className="font-body text-[11px] tracking-wide">@luxodontologiaestetica</span>
+      </motion.a>
 
       <motion.button
         onClick={scrollToUnits}
