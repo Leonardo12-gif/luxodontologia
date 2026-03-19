@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Instagram } from "lucide-react";
 import logoLux from "@/assets/logo-lux.png";
 
 const fadeUp = {
