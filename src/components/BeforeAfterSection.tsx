@@ -101,7 +101,7 @@ const BeforeAfterSection = () => {
       </motion.h2>
 
       <div
-        className="relative overflow-hidden rounded-xl border border-border/50"
+        className="relative overflow-hidden rounded-xl border border-border shadow-sm"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onMouseEnter={pauseAutoplay}
