@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import before1 from "@/assets/before-1.png";
 import after1 from "@/assets/after-1.png";
-import result3 from "@/assets/result-3.png";
-import result4 from "@/assets/result-4.png";
-import result5 from "@/assets/result-5.png";
-import result6 from "@/assets/result-6.png";
-import result7 from "@/assets/result-7.png";
 
-const resultSlides = [result3, result4, result5, result6, result7];
+const resultSlides = [
+  "/results/result-3.png",
+  "/results/result-4.png",
+  "/results/result-5.png",
+  "/results/result-6.png",
+  "/results/result-7.png",
+];
 
 const BeforeAfterSection = () => {
   const [current, setCurrent] = useState(0);
@@ -124,6 +125,7 @@ const BeforeAfterSection = () => {
             prev();
           }}
           className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-background/60 backdrop-blur flex items-center justify-center text-foreground transition-all"
+          aria-label="Ver resultado anterior"
         >
           <ChevronLeft className="w-4 h-4" />
         </button>
@@ -133,6 +135,7 @@ const BeforeAfterSection = () => {
             next();
           }}
           className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-background/60 backdrop-blur flex items-center justify-center text-foreground transition-all"
+          aria-label="Ver próximo resultado"
         >
           <ChevronRight className="w-4 h-4" />
         </button>
@@ -148,6 +151,7 @@ const BeforeAfterSection = () => {
               className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
                 i === current ? "bg-champagne w-4" : "bg-foreground/30"
               }`}
+              aria-label={`Ir para resultado ${i + 1}`}
             />
           ))}
         </div>
