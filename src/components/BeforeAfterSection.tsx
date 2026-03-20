@@ -5,11 +5,11 @@ import before1 from "@/assets/before-1.png";
 import after1 from "@/assets/after-1.png";
 
 const resultSlides = [
-  "/results/result-3.png",
-  "/results/result-4.png",
-  "/results/result-5.png",
-  "/results/result-6.png",
-  "/results/result-7.png",
+  "/results/result-3.webp",
+  "/results/result-4.webp",
+  "/results/result-5.webp",
+  "/results/result-6.webp",
+  "/results/result-7.webp",
 ];
 
 const BeforeAfterSection = () => {
