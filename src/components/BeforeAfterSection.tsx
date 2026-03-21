@@ -3,21 +3,13 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import before1 from "@/assets/before-1.png";
 import after1 from "@/assets/after-1.png";
-const assetVersion = "v3";
-const resultFallback = `/results/result-fallback.webp?${assetVersion}`;
+import resultMain from "@/assets/result-main.png";
 
-const resultSlides = [
-  `/results/result-3.webp?${assetVersion}`,
-  `/results/result-4.webp?${assetVersion}`,
-  `/results/result-5.webp?${assetVersion}`,
-  `/results/result-6.webp?${assetVersion}`,
-  `/results/result-7.webp?${assetVersion}`,
-];
+const resultSlides = [resultMain, resultMain, resultMain, resultMain, resultMain];
 
 const BeforeAfterSection = () => {
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [failedSlides, setFailedSlides] = useState<Record<number, boolean>>({});
   const touchStart = useRef(0);
   const resumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -71,13 +63,6 @@ const BeforeAfterSection = () => {
     }
   };
 
-  const handleSlideError = (index: number) => {
-    setFailedSlides((currentFailures) => {
-      if (currentFailures[index]) return currentFailures;
-      return { ...currentFailures, [index]: true };
-    });
-  };
-
   return (
     <section className="px-6 py-8">
       <motion.h2
@@ -125,11 +110,10 @@ const BeforeAfterSection = () => {
           {resultSlides.map((img, i) => (
             <div key={i} className="w-full flex-shrink-0">
               <img
-                src={failedSlides[i] ? resultFallback : img}
+                src={img}
                 alt={`Resultado ${i + 1}`}
                 className="w-full aspect-[4/3] object-cover"
                 loading="lazy"
-                onError={() => handleSlideError(i)}
               />
             </div>
           ))}
