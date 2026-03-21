@@ -3,14 +3,15 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import before1 from "@/assets/before-1.png";
 import after1 from "@/assets/after-1.png";
-import resultFallback from "@/assets/result-fallback.png";
+const assetVersion = "v3";
+const resultFallback = `/results/result-fallback.webp?${assetVersion}`;
 
 const resultSlides = [
-  "/results/result-3.webp",
-  "/results/result-4.webp",
-  "/results/result-5.webp",
-  "/results/result-6.webp",
-  "/results/result-7.webp",
+  `/results/result-3.webp?${assetVersion}`,
+  `/results/result-4.webp?${assetVersion}`,
+  `/results/result-5.webp?${assetVersion}`,
+  `/results/result-6.webp?${assetVersion}`,
+  `/results/result-7.webp?${assetVersion}`,
 ];
 
 const BeforeAfterSection = () => {
