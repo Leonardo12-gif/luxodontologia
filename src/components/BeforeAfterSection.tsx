@@ -3,13 +3,7 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import before1 from "@/assets/before-1.png";
 import after1 from "@/assets/after-1.png";
-import result1 from "@/assets/result-1.png";
-import result2 from "@/assets/result-2.png";
-import result3 from "@/assets/result-3.png";
-import result4 from "@/assets/result-4.png";
-import result5 from "@/assets/result-5.png";
-
-const resultSlides = [result1, result2, result3, result4, result5];
+import { resultSlides } from "@/data/resultSlides";
 
 const BeforeAfterSection = () => {
   const [current, setCurrent] = useState(0);
