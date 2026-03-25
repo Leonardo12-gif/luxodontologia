@@ -10,7 +10,7 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 const units = [
   { city: "Campinas", address: "Torre Ypê - Rua Aguaçu, 171 - Sala M019 - Lot. Alphaville, Campinas - SP", whatsapp: "5519989323288" },
   { city: "Sorocaba", address: "R. Barão de Piratininga, 106 - Jd. Faculdade, Sorocaba - SP", whatsapp: "5515991901681" },
-  { city: "São Paulo / Tatuapé", address: "R. Antônio de Barros, 1933 - Vila Carrão, São Paulo - SP", whatsapp: "5511916768181" },
+  { city: "São Paulo / Tatuapé", address: "R. Antônio de Barros, 1933 - Vila Carrão, São Paulo - SP", whatsapp: "5511960646620" },
   { city: "São José dos Campos", address: "Tv. João Dias, 40 - Unid 23 - Centro, São José dos Campos - SP", whatsapp: "5512991164224" },
   { city: "Santos", address: "R. Goiás, 65 - Gonzaga, Santos - SP", whatsapp: "5513991630445" },
   { city: "Alphaville", address: "Calçada das Tagetes, 14 - Alphaville, Barueri - SP", whatsapp: "5511912014016" },
@@ -41,7 +41,7 @@ const UnitsSection = () => (
           <p className="font-body text-[11px] text-muted-foreground leading-relaxed mb-3">{unit.address}</p>
           <div className="flex gap-2">
             <a
-              href={`https://wa.me/${unit.whatsapp}?text=Olá! Gostaria de agendar um atendimento na unidade ${unit.city}.`}
+              href={`https://wa.me/${unit.whatsapp}?text=Olá, vim pelo link da bio e gostaria de mais informações.`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body text-[11px] font-semibold tracking-wide uppercase py-2.5 rounded-lg border border-champagne/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
