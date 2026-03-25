@@ -41,7 +41,7 @@ const UnitsSection = () => (
           <p className="font-body text-[11px] text-muted-foreground leading-relaxed mb-3">{unit.address}</p>
           <div className="flex gap-2">
             <a
-              href={`https://wa.me/${unit.whatsapp}?text=Olá! Gostaria de agendar um atendimento na unidade ${unit.city}.`}
+              href={`https://wa.me/${unit.whatsapp}?text=Olá, vim pelo link da bio e gostaria de mais informações.`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body text-[11px] font-semibold tracking-wide uppercase py-2.5 rounded-lg border border-champagne/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
