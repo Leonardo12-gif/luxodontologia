@@ -10,7 +10,7 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 const units = [
   { city: "Campinas", address: "Torre Ypê - Rua Aguaçu, 171 - Sala M019 - Lot. Alphaville, Campinas - SP", whatsapp: "5519989323288" },
   { city: "Sorocaba", address: "R. Barão de Piratininga, 106 - Jd. Faculdade, Sorocaba - SP", whatsapp: "5515991901681" },
-  { city: "São Paulo / Tatuapé", address: "R. Antônio de Barros, 1933 - Vila Carrão, São Paulo - SP", whatsapp: "5511916768181" },
+  { city: "São Paulo / Tatuapé", address: "R. Antônio de Barros, 1933 - Vila Carrão, São Paulo - SP", whatsapp: "5511960646620" },
   { city: "São José dos Campos", address: "Tv. João Dias, 40 - Unid 23 - Centro, São José dos Campos - SP", whatsapp: "5512991164224" },
   { city: "Santos", address: "R. Goiás, 65 - Gonzaga, Santos - SP", whatsapp: "5513991630445" },
   { city: "Alphaville", address: "Calçada das Tagetes, 14 - Alphaville, Barueri - SP", whatsapp: "5511912014016" },

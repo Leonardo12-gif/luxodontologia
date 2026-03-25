@@ -2,7 +2,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import before1 from "@/assets/before-1.png";
-import after1 from "@/assets/after-1.png";
+import after1 from "@/assets/after-1.jpg";
 import { resultSlides } from "@/data/resultSlides";
 
 const BeforeAfterSection = () => {
