@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin } from "lucide-react";
+import { MapPin, Globe } from "lucide-react";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -26,6 +26,26 @@ const UnitsSection = () => (
     >
       Escolha sua Unidade
     </motion.h2>
+
+    <motion.div
+      className="bg-card rounded-xl p-4 border border-border shadow-sm mb-3"
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+    >
+      <h3 className="font-display text-base font-semibold text-foreground mb-0.5">Nosso Site</h3>
+      <p className="font-body text-[11px] text-muted-foreground leading-relaxed mb-3">Conheça mais sobre a Lux Odontologia</p>
+      <a
+        href="https://luxodonto.vercel.app"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body text-[11px] font-semibold tracking-wide uppercase py-2.5 rounded-lg border border-champagne/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+      >
+        <Globe className="w-3.5 h-3.5" />
+        Acesse nosso Site
+      </a>
+    </motion.div>
 
     <div className="grid gap-3">
       {units.map((unit, i) => (
