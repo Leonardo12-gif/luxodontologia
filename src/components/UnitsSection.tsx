@@ -18,17 +18,8 @@ const units = [
 
 const UnitsSection = () => (
   <section id="unidades" className="px-6 py-8">
-    <motion.h2
-      className="font-display text-xl font-semibold text-foreground text-center mb-5"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-    >
-      Escolha sua Unidade
-    </motion.h2>
-
     <motion.div
-      className="bg-card rounded-xl p-4 border border-border shadow-sm mb-3"
+      className="bg-card rounded-xl p-4 border border-border shadow-sm mb-5"
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -46,6 +37,15 @@ const UnitsSection = () => (
         Acesse nosso Site
       </a>
     </motion.div>
+
+    <motion.h2
+      className="font-display text-xl font-semibold text-foreground text-center mb-5"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+    >
+      Escolha sua Unidade
+    </motion.h2>
 
     <div className="grid gap-3">
       {units.map((unit, i) => (
