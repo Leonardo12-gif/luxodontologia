@@ -82,13 +82,26 @@ const HeroSection = () => {
         <span className="font-body text-[11px] tracking-wide">@luxodontologiaestetica</span>
       </motion.a>
 
+      <motion.a
+        href="https://luxodonto.vercel.app"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-body text-xs font-semibold tracking-wider uppercase px-7 py-3 rounded-full bg-secondary text-secondary-foreground border border-champagne/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+        custom={4}
+      >
+        Acesse nosso Site
+      </motion.a>
+
       <motion.button
         onClick={scrollToUnits}
         className="font-body text-xs font-semibold tracking-wider uppercase px-7 py-3 rounded-full bg-primary text-primary-foreground border border-champagne/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 glow-primary"
         variants={fadeUp}
         initial="hidden"
         animate="visible"
-        custom={4}
+        custom={5}
         whileHover={{ boxShadow: "0 0 50px hsla(345, 80%, 25%, 0.5)" }}
       >
         Agendar Atendimento
