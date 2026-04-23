@@ -11,7 +11,7 @@ const units = [
   { city: "Campinas", address: "Torre Ypê - Rua Aguaçu, 171 - Sala M019 - Lot. Alphaville, Campinas - SP", whatsapp: "5519989323288" },
   { city: "Sorocaba", address: "R. Barão de Piratininga, 106 - Jd. Faculdade, Sorocaba - SP", whatsapp: "5515991901681" },
   { city: "São Paulo / Tatuapé", address: "R. Antônio de Barros, 1933 - Vila Carrão, São Paulo - SP", whatsapp: "5511960646620" },
-  { city: "São José dos Campos", address: "Av. Marechal Floriano Peixoto, 347 - Sala 805 - Centro, São José dos Campos - SP", whatsapp: "5511922136890" },
+  { city: "São José dos Campos", address: "Av. Marechal Floriano Peixoto, 347 - Sala 805 - Centro, São José dos Campos - SP", whatsapp: "5511930411705" },
   { city: "Santos", address: "Av. Washington Luís, 316 - Sala 167 - Gonzaga, Santos - SP, 11055-000", whatsapp: "5513991630445" },
   { city: "Alphaville", address: "Calçada das Tagetes, 14 - Alphaville, Barueri - SP", whatsapp: "5511912014016" },
 ];
