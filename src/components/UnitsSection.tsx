@@ -14,6 +14,7 @@ const units = [
   { city: "São José dos Campos", address: "Av. Marechal Floriano Peixoto, 347 - Sala 805 - Centro, São José dos Campos - SP", whatsapp: "5511930411705" },
   { city: "Santos", address: "Av. Washington Luís, 316 - Sala 167 - Gonzaga, Santos - SP, 11055-000", whatsapp: "5513991630445" },
   { city: "Alphaville", address: "Calçada das Tagetes, 14 - Alphaville, Barueri - SP", whatsapp: "5511912014016" },
+  { city: "Suzano", address: "Terminal de Suzano - Av. Jorge Bei Maluf, 1054 - Vila Theodoro, Suzano - SP", whatsapp: "5511939110023" },
 ];
 
 const UnitsSection = () => (
