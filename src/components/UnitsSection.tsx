@@ -16,6 +16,7 @@ const units = [
   { city: "Alphaville", address: "Calçada das Tagetes, 14 - Alphaville, Barueri - SP", whatsapp: "5511912014016" },
   { city: "Suzano", address: "Terminal de Suzano - Av. Jorge Bei Maluf, 1054 - Vila Theodoro, Suzano - SP", whatsapp: "5511939110023" },
   { city: "Guarulhos", address: "Rua Santo Antônio, nº 43 - Sala 813 - Centro, Guarulhos - SP", whatsapp: "5511924857861" },
+  { city: "Jundiaí", address: "Rua Anchieta, nº 134, Sala 1102, Condomínio Uffizi Medical & Business Center, Centro, Jundiaí - SP, 13201-804", whatsapp: "5511933433340" },
 ];
 
 const UnitsSection = () => (
