@@ -15,6 +15,7 @@ const units = [
   { city: "Santos", address: "Av. Washington Luís, 316 - Sala 167 - Gonzaga, Santos - SP, 11055-000", whatsapp: "5513991630445" },
   { city: "Alphaville", address: "Calçada das Tagetes, 14 - Alphaville, Barueri - SP", whatsapp: "5511912014016" },
   { city: "Suzano", address: "Terminal de Suzano - Av. Jorge Bei Maluf, 1054 - Vila Theodoro, Suzano - SP", whatsapp: "5511939110023" },
+  { city: "Guarulhos", address: "Rua Santo Antônio, nº 43 - Sala 813 - Centro, Guarulhos - SP", whatsapp: "5511924857861" },
 ];
 
 const UnitsSection = () => (
