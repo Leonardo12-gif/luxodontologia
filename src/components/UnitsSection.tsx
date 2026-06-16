@@ -17,6 +17,7 @@ const units = [
   { city: "Suzano", address: "Terminal de Suzano - Av. Jorge Bei Maluf, 1054 - Vila Theodoro, Suzano - SP", whatsapp: "5511939110023" },
   { city: "Guarulhos", address: "Rua Santo Antônio, nº 43 - Sala 813 - Centro, Guarulhos - SP", whatsapp: "5511924857861" },
   { city: "Jundiaí", address: "Rua Anchieta, nº 134, Sala 1102, Condomínio Uffizi Medical & Business Center, Centro, Jundiaí - SP, 13201-804", whatsapp: "5511933433340" },
+  { city: "São Bernardo do Campo", address: "R. Laurindo Ádamo, 74 – Rudge Ramos, São Bernardo do Campo, SP, 09624-120", whatsapp: "5511916768181", message: "Olá, vim pelo link da bio da Lux Odontologia e gostaria de saber mais!" },
 ];
 
 const UnitsSection = () => (
