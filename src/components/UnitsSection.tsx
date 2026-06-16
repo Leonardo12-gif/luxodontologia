@@ -17,6 +17,7 @@ const units = [
   { city: "Suzano", address: "Terminal de Suzano - Av. Jorge Bei Maluf, 1054 - Vila Theodoro, Suzano - SP", whatsapp: "5511939110023" },
   { city: "Guarulhos", address: "Rua Santo Antônio, nº 43 - Sala 813 - Centro, Guarulhos - SP", whatsapp: "5511924857861" },
   { city: "Jundiaí", address: "Rua Anchieta, nº 134, Sala 1102, Condomínio Uffizi Medical & Business Center, Centro, Jundiaí - SP, 13201-804", whatsapp: "5511933433340" },
+  { city: "São Bernardo do Campo", address: "R. Laurindo Ádamo, 74 – Rudge Ramos, São Bernardo do Campo, SP, 09624-120", whatsapp: "5511916768181", message: "Olá, vim pelo link da bio da Lux Odontologia e gostaria de saber mais!" },
 ];
 
 const UnitsSection = () => (
@@ -64,7 +65,7 @@ const UnitsSection = () => (
           <p className="font-body text-[11px] text-muted-foreground leading-relaxed mb-3">{unit.address}</p>
           <div className="flex gap-2">
             <a
-              href={`https://wa.me/${unit.whatsapp}?text=Olá, vim pelo link da bio e gostaria de mais informações.`}
+              href={`https://wa.me/${unit.whatsapp}?text=${encodeURIComponent(unit.message || "Olá, vim pelo link da bio e gostaria de mais informações.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 bg-primary text-primary-foreground font-body text-[11px] font-semibold tracking-wide uppercase py-2.5 rounded-lg border border-champagne/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
