@@ -25,7 +25,7 @@ const HeroSection = () => {
         animate="visible"
         custom={0}
       >
-        <img src={logoLux} alt="Lux Odontologia" className="w-full h-full object-cover" />
+        <img src={logoLux} alt="Instituto Lux Odontologia" className="w-full h-full object-cover" />
       </motion.div>
 
       <motion.h1
@@ -35,7 +35,7 @@ const HeroSection = () => {
         animate="visible"
         custom={1}
       >
-        Lux Odontologia
+        Instituto Lux Odontologia
       </motion.h1>
 
       <motion.p
@@ -69,7 +69,7 @@ const HeroSection = () => {
       </motion.p>
 
       <motion.a
-        href="https://www.instagram.com/luxodontologiaestetica/"
+        href="https://www.instagram.com/institutoluxodonto?igsh=cm5qZ2J1YnNxbWZn"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-1.5 text-muted-foreground hover:text-champagne transition-colors duration-300 mb-6"
@@ -79,7 +79,7 @@ const HeroSection = () => {
         custom={3.5}
       >
         <Instagram className="w-4 h-4" />
-        <span className="font-body text-[11px] tracking-wide">@luxodontologiaestetica</span>
+        <span className="font-body text-[11px] tracking-wide">@institutoluxodonto</span>
       </motion.a>
 
       <motion.button
